@@ -270,10 +270,50 @@ async function createModeToggle() {
 }
 
 // Switch between regions and KSP mode
+// function switchMode(mode) {
+//     try {
+//         currentMode = mode;
+
+//         // Update active button
+//         document.querySelectorAll('.mode-btn').forEach(btn => {
+//             btn.classList.remove('active');
+//         });
+//         document.querySelector(`[data-mode="${mode}"]`).classList.add('active');
+
+//         // Update list content
+//         if (mode === 'regions') {
+//             populateRegionList();
+//             updateMapMarkers('regions');
+//         } else {
+//             populateKspList();
+//             updateMapMarkers('ksp');
+//         }
+
+//         // Reset search
+//         clearSearch();
+        
+//         // Update navigation
+//         resetPresentation();
+        
+//     } catch (error) {
+//         logError('switchMode', error, { mode });
+//     }
+// }
 function switchMode(mode) {
     try {
         currentMode = mode;
-        
+
+        // --- KODE BARU UNTUK MENGUBAH JUDUL PETA ---
+        const mapTitleElement = document.getElementById('map-title');
+        if (mapTitleElement) {
+            if (mode === 'ksp') {
+                mapTitleElement.textContent = 'Peta Potensi & Peluang Investasi pada KSP NTB';
+            } else { // mode === 'regions'
+                mapTitleElement.textContent = 'Peta Profil Sektor & Investasi Kabupaten/Kota di NTB';
+            }
+        }
+        // --- AKHIR KODE BARU ---
+
         // Update active button
         document.querySelectorAll('.mode-btn').forEach(btn => {
             btn.classList.remove('active');
@@ -1598,12 +1638,12 @@ async function createRegionSlides() {
                     <div class="analysis-cards">
                         <div class="analysis-card">
                             <h4><i class="fas fa-layer-group"></i> Sektor Basis</h4>
-                            <p>Sektor yang menjadi fondasi perekonomian wilayah.</p>
+                            <p>Sektor Basis dengan Nilai LQ lebih besar dari 1 yang menjadi basis pertumbuhan/kemandirian ekonomi daerah</p>
                             <ul>${sektorBasisHTML || '<li>Data tidak tersedia</li>'}</ul>
                         </div>
                         <div class="analysis-card">
                             <h4><i class="fas fa-star"></i> Sektor Unggulan 2025</h4>
-                            <p>Sektor dengan potensi pertumbuhan dan daya saing tertinggi.</p>
+                            <p>Sektor Prioritas Pengembangan Investasi pada tahun 2025</p>
                             <ul>${sektorUnggulanHTML || '<li>Data tidak tersedia</li>'}</ul>
                         </div>
                     </div>
