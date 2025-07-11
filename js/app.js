@@ -1613,7 +1613,7 @@ async function createRegionSlides() {
             slideContent.appendChild(slide);
         });
         
-        // Create KSP slides
+        
         await createKspSlides();
         
         // Add keyboard navigation to sector cards

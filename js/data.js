@@ -4627,7 +4627,7 @@ const kspData = {
         "coverage": "Kabupaten Lombok Barat, Kabupaten Lombok Tengah, Kabupaten Lombok Timur, perairan Kawasan Lembar, perairan Kawasan Teluk Sepi, perairan Kawasan Kuta, perairan Kawasan Teluk Ekas, dan perairan Kawasan Samudera Hindia Lombok",
         "sectors": ["Pariwisata", "Perikanan", "Industri"],
         "description": "Mewujudkan Kawasan Pariwisata, Perikanan, dan industri berbasis potensi sumber daya alam yang mendukung KEK Mandalika",
-        "coordinates": [116.3081, -8.8500],
+        "coordinates":   [116.22851343541217,-8.933523089593596], 
         "objectives": [
             "Pengembangan linkage system sektor pariwisata, Perikanan, dan industri yang terintegrasi",
             "Perlindungan, pelestarian, serta optimalisasi pemanfaatan potensi sumber daya alam serta sumber daya Kelautan dan Perikanan",
@@ -4646,7 +4646,7 @@ const kspData = {
         "coverage": "Kabupaten Sumbawa Barat dan perairan Kawasan Maluk",
         "sectors": ["Pertambangan", "Industri", "Perikanan", "Pariwisata"],
         "description": "Mewujudkan Kawasan pendukung dan penyangga Kawasan Industri Maluk berbasis sektor unggulan Pertambangan dan industri turunannya, Perikanan, serta pariwisata",
-        "coordinates": [116.8167, -8.7167],
+        "coordinates": [ 116.79838276024557, -8.888478806713746],
         "objectives": [
             "Pengembangan pusat-pusat pertumbuhan berbasis potensi sumber daya alam unggulan",
             "Perlindungan, pelestarian, serta optimalisasi pemanfaatan potensi sumber daya alam",
@@ -4663,7 +4663,7 @@ const kspData = {
         "coverage": "Kabupaten Sumbawa Barat, Kabupaten Sumbawa, perairan Kawasan Maluk, dan perairan Kawasan Alas",
         "sectors": ["Agroindustri", "Perikanan", "Peternakan", "Pariwisata"],
         "description": "Mewujudkan Kawasan agribisnis dengan sektor unggulan agroindustri, Perikanan, peternakan, dan pariwisata",
-        "coordinates": [117.0000, -8.5000],
+        "coordinates":  [117.01325503834397, -8.518767279334671],
         "objectives": [
             "Pengembangan pusat-pusat pertumbuhan berbasis potensi sumber daya alam unggulan",
             "Perlindungan, pelestarian, serta optimalisasi pemanfaatan potensi sumber daya alam",
@@ -4680,7 +4680,7 @@ const kspData = {
         "coverage": "Kabupaten Sumbawa, Kabupaten Dompu, perairan Kawasan Pantura Sumbawa, perairan Kawasan Laut Flores Dompu, dan perairan Kawasan Teluk Saleh",
         "sectors": ["Perikanan", "Pariwisata", "Pertanian", "Peternakan", "Mina Industri", "Agroindustri"],
         "description": "Mewujudkan Kawasan Strategis Cepat Tumbuh (KSCT) SAMOTA yang berbasis sektor Perikanan, pariwisata, pertanian, peternakan, mina industri, dan agroindustri",
-        "coordinates": [117.6000, -8.3000],
+        "coordinates":  [ 117.66204390884762, -8.272058880435374],
         "objectives": [
             "Pengembangan sektor pariwisata, industri dan Perikanan yang berkelanjutan dan memiliki nilai tambah yang tinggi",
             "Penguatan sistem pusat pelayanan kegiatan ekonomi yang terintegrasi dengan sistem jaringan prasarana Wilayah",
@@ -4697,7 +4697,7 @@ const kspData = {
         "coverage": "Kabupaten Sumbawa, Kabupaten Dompu, Kabupaten Bima, perairan Kawasan Teluk Cempi, perairan Kawasan Samudera Hindia Sumba Dompu, dan perairan Kawasan Samudera Hindia Cempi Waworada",
         "sectors": ["Pariwisata", "Perikanan", "Industri", "Pertambangan", "Energi"],
         "description": "Mewujudkan Kawasan pertumbuhan baru dengan sektor unggulan pariwisata, Perikanan, industri, Pertambangan dan energi",
-        "coordinates": [118.2000, -8.6000],
+        "coordinates": [ 118.33542065611783, -8.776382847782786],
         "objectives": [
             "Pengembangan pusat-pusat pertumbuhan berbasis potensi sumber daya alam unggulan",
             "Perlindungan, pelestarian, serta optimalisasi pemanfaatan potensi sumber daya alam",
@@ -4715,7 +4715,7 @@ const kspData = {
         "coverage": "Kabupaten Dompu, Kabupaten Bima, Kota Bima, perairan Kawasan Laut Flores Bima Dompu, perairan Kawasan Laut Flores Dompu, perairan Kawasan Teluk Bima, dan perairan Kawasan Teluk Sanggar",
         "sectors": ["Pariwisata", "Perikanan", "Industri", "Perdagangan dan Jasa"],
         "description": "Mewujudkan Kawasan Teluk Bima sebagai Kawasan Pariwisata, perikanan, industri, serta perdagangan dan jasa yang berwawasan lingkungan dan berbasis kemasyarakatan",
-        "coordinates": [118.7167, -8.4667],
+        "coordinates": [118.70, -8.35],
         "objectives": [
             "Pengembangan linkage system sektor pariwisata, Perikanan, industri, serta perdagangan dan jasa yang terintegrasi",
             "Perlindungan, pelestarian, serta optimalisasi pemanfaatan potensi sumber daya alam serta sumber daya Kelautan dan Perikanan",
@@ -4734,7 +4734,7 @@ const kspData = {
         "coverage": "Kabupaten Bima, perairan Kawasan Samudera Hindia Cempi Waworada, perairan Kawasan Waworada, perairan Kawasan Sape, dan perairan Kawasan Laut Flores Bima Dompu",
         "sectors": ["Perikanan", "Pariwisata", "Industri"],
         "description": "Mewujudkan Kawasan timur pertumbuhan baru berbasis sektor Perikanan, pariwisata, dan industri",
-        "coordinates": [118.8500, -8.4000],
+        "coordinates":  [ 119.15291872176854, -8.73643643684993],
         "objectives": [
             "Pengembangan linkage system sektor pariwisata, Perikanan, dan industri yang terintegrasi",
             "Perlindungan, pelestarian, serta optimalisasi pemanfaatan potensi sumber daya alam serta sumber daya Kelautan dan Perikanan",
@@ -4753,7 +4753,7 @@ const kspData = {
         "coverage": "Kabupaten Sumbawa Barat dan Kabupaten Sumbawa",
         "sectors": ["Konservasi", "Mitigasi Bencana", "Jasa Ekosistem"],
         "description": "Mewujudkan Kawasan dengan nilai konservasi tinggi berbasis mitigasi bencana",
-        "coordinates": [117.1000, -8.6000],
+        "coordinates": [117.08625793245267, -8.882616599770664],
         "objectives": [
             "Perlindungan terhadap kelestarian keanekaragaman hayati",
             "Pemanfaatan jasa ekosistem ramah lingkungan",
@@ -4769,7 +4769,7 @@ const kspData = {
         "coverage": "Kabupaten Dompu dan Kabupaten Bima",
         "sectors": ["Konservasi", "Geologi", "Pariwisata Alam"],
         "description": "Kawasan konservasi gunung berapi dengan nilai geologis dan ekologis tinggi",
-        "coordinates": [117.9900, -8.2500],
+        "coordinates": [117.99, -8.25],
         "objectives": [
             "Pelestarian kawasan konservasi gunung berapi",
             "Pengembangan pariwisata alam berkelanjutan",
@@ -4783,7 +4783,7 @@ const kspData = {
         "coverage": "Kabupaten Dompu dan Kabupaten Bima",
         "sectors": ["Konservasi Hutan", "Perlindungan Tata Air", "Rehabilitasi Lahan"],
         "description": "Mewujudkan Kawasan penyangga dan perlindungan tata air",
-        "coordinates": [118.5000, -8.3000],
+        "coordinates": [118.60, -8.70],
         "objectives": [
             "Penghijauan dan reboisasi hutan",
             "Rehabilitasi hutan dan lahan kritis",
@@ -4829,6 +4829,11 @@ const regionCoordinates = {
 };
 
 const sektorEkonomiData = {
+    "Nusa Tenggara Barat": {
+        basis: ["Pertanian, Kehutanan, dan Perikanan", "Pertambangan dan Penggalian", "Pengadaan Air, Pengelolaan Sampah, Limbah dan Daur Ulang", "Perdagangan Besar dan Eceran; Reparasi Mobil dan Sepeda Motor", "Real Estat", "Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib", "Jasa Pendidikan","Jasa Kesehatan dan Kegiatan Sosial", "Jasa Lainnya"],
+        unggulan: ["Pertanian , kehutanan dan Perikanan", "Pertambangan dan penggalian", "Industri pengolahan", "Penyediaan akomodasi dan makan minum (Pariwisata)"]
+
+    },
     "Mataram": {
         basis: ["Industri Pengolahan","Pengadaan Listrik dan Gas","Pengadaan Air", "Pengelolaan Sampah, Limbah dan Daur Ulang", "Perdagangan Besar dan Eceran","Reparasi Mobil dan Sepeda Motor", "Informasi dan Komunikasi", "Jasa Keuangan dan Asuransi", "Real Estat", "Jasa Perusahaan", "Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib", "Jasa Pendidikan", "Jasa Kesehatan dan Kegiatan Sosial", "Jasa Lainnya"],
         unggulan: ["Industri Pengolahan", "Penyediaan Akomodasi dan Makan Minum (Pariwisata)"]
@@ -4907,8 +4912,6 @@ const sektorEkonomiData = {
     }
 };
 
-
 const regions = Object.keys(investmentData);
 const kspKeys = Object.keys(kspData);
 
-// data.js
