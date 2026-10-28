@@ -177,9 +177,19 @@ async function initializePresentation() {
         
         performanceMetrics.dataLoadEnd = performance.now();
         
+        // Temporary map-only mode: start on map slide
+        if (document.body.classList.contains('map-only-mode')) {
+            currentSlide = 1;
+            updateProgress();
+            updateNavigationButtons();
+        }
+
         // Initialize map with delay for better UX
-        setTimeout(() => {
-            initializeMapWithRetry();
+        setTimeout(async () => {
+            await initializeMapWithRetry();
+            if (document.body.classList.contains('map-only-mode') && presentationMap) {
+                setTimeout(() => presentationMap.invalidateSize(), 100);
+            }
         }, 500);
         
         // Hide loading overlay

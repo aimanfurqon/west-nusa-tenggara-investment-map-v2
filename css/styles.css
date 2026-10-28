@@ -1882,3 +1882,59 @@ body {
     outline: none !important;
     user-select: none !important;
 }
+
+/* Temporary: full-screen map only (no header / sidebar) */
+body.map-only-mode {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+body.map-only-mode .presentation-header,
+body.map-only-mode .slide-navigation,
+body.map-only-mode .map-header,
+body.map-only-mode .slide-navigation-bottom,
+body.map-only-mode .map-nav-button,
+body.map-only-mode .progress-bar,
+body.map-only-mode .skip-link {
+    display: none !important;
+}
+
+body.map-only-mode .presentation-container,
+body.map-only-mode .content-area,
+body.map-only-mode .slide-content,
+body.map-only-mode .slide.active,
+body.map-only-mode .map-overview-slide,
+body.map-only-mode .map-container,
+body.map-only-mode #presentationMap {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+}
+
+body.map-only-mode .slide-content {
+    overflow: hidden;
+}
+
+body.map-only-mode .map-overview-slide {
+    display: flex;
+    flex-direction: column;
+}
+
+body.map-only-mode .map-container {
+    flex: 1;
+    position: relative;
+}
+
+body.map-only-mode #presentationMap {
+    position: absolute;
+    inset: 0;
+    min-height: 0;
+    height: 100%;
+    width: 100%;
+}
