@@ -1888,6 +1888,7 @@ body.map-only-mode {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+    background: #d7e4e6;
 }
 
 body.map-only-mode .presentation-header,
@@ -1924,6 +1925,237 @@ body.map-only-mode .slide-content {
 body.map-only-mode .map-overview-slide {
     display: flex;
     flex-direction: column;
+}
+
+.nri-summary,
+.nri-legend {
+    position: absolute;
+    z-index: 1100;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(14, 48, 46, 0.12);
+    color: #143236;
+    font-family: 'Inter', sans-serif;
+}
+
+.nri-summary {
+    top: 20px;
+    left: 20px;
+    width: min(280px, calc(100vw - 40px));
+    padding: 16px 18px 14px;
+}
+
+.nri-legend {
+    left: 20px;
+    bottom: 20px;
+    width: min(260px, calc(100vw - 40px));
+    padding: 14px 16px 12px;
+}
+
+.nri-summary h2 {
+    margin: 2px 0 0;
+    font-size: 1.35rem;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    color: #10292e;
+}
+
+.nri-kicker {
+    margin: 0;
+    font-size: 0.68rem;
+    font-weight: 650;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #5d7578;
+}
+
+.nri-period {
+    margin: 4px 0 10px;
+    font-size: 0.82rem;
+    color: #5d7578;
+}
+
+.nri-hero {
+    margin: 0;
+    font-size: 1.45rem;
+    font-weight: 750;
+    letter-spacing: -0.03em;
+    color: #0f4f4c;
+}
+
+.nri-split {
+    margin: 8px 0 0;
+    font-size: 0.78rem;
+    line-height: 1.45;
+    color: #3e585c;
+}
+
+.nri-scale {
+    height: 10px;
+    margin: 10px 0 8px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgb(186, 220, 214) 0%, rgb(86, 166, 156) 45%, rgb(16, 86, 82) 74%, rgb(6, 40, 38) 100%);
+}
+
+.nri-scale-labels {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 0.68rem;
+    line-height: 1.3;
+    color: #4d666a;
+}
+
+.nri-scale-labels span:last-child {
+    text-align: right;
+}
+
+.nri-label-icon {
+    background: transparent !important;
+    border: 0 !important;
+}
+
+.nri-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 72px;
+    padding: 2px 7px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.92);
+    color: #143236;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 650;
+    line-height: 1.3;
+    white-space: nowrap;
+    box-shadow: 0 1px 4px rgba(14, 48, 46, 0.16);
+}
+
+.nri-popup-wrap .leaflet-popup-content-wrapper {
+    border-radius: 16px !important;
+    overflow: hidden;
+}
+
+.nri-popup-wrap .leaflet-popup-content {
+    width: 280px !important;
+    min-width: 280px !important;
+}
+
+.nri-popup-wrap .leaflet-popup-close-button {
+    color: #143236 !important;
+    background: transparent !important;
+    font-size: 18px !important;
+    width: 24px !important;
+    height: 24px !important;
+}
+
+.nri-popup {
+    padding: 16px 16px 14px;
+    font-family: 'Inter', sans-serif;
+    color: #143236;
+}
+
+.nri-popup h3 {
+    margin: 3px 28px 0 0;
+    font-size: 1.12rem;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+}
+
+.nri-popup .nri-total {
+    margin: 12px 0 0;
+    font-size: 1.35rem;
+    font-weight: 750;
+    letter-spacing: -0.03em;
+    color: #0f4f4c;
+}
+
+.nri-total-label {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #5d7578;
+}
+
+.nri-rows {
+    margin: 12px 0 0;
+}
+
+.nri-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 7px 0 0;
+    margin-top: 7px;
+    border-top: 1px solid #e5eeee;
+    font-size: 0.84rem;
+}
+
+.nri-row dt {
+    color: #5d7578;
+}
+
+.nri-row dd {
+    margin: 0;
+    font-weight: 680;
+    text-align: right;
+}
+
+.nri-chips {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.nri-chip {
+    padding: 8px 4px;
+    border-radius: 10px;
+    background: #f3f7f7;
+    text-align: center;
+}
+
+.nri-chip b {
+    display: block;
+    font-size: 0.92rem;
+    color: #143236;
+}
+
+.nri-chip span {
+    display: block;
+    margin-top: 2px;
+    font-size: 0.64rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #6a8084;
+}
+
+body.map-only-mode .leaflet-bottom.leaflet-right {
+    margin-bottom: 8px;
+    margin-right: 8px;
+}
+
+@media (max-width: 720px) {
+    .nri-summary,
+    .nri-legend {
+        left: 12px;
+        width: min(230px, calc(100vw - 24px));
+    }
+
+    .nri-summary {
+        top: 12px;
+        padding: 12px;
+    }
+
+    .nri-summary h2,
+    .nri-hero {
+        font-size: 1.05rem;
+    }
+
+    .nri-legend {
+        bottom: 12px;
+    }
 }
 
 body.map-only-mode .map-container {

@@ -188,7 +188,10 @@ async function initializePresentation() {
         setTimeout(async () => {
             await initializeMapWithRetry();
             if (document.body.classList.contains('map-only-mode') && presentationMap) {
-                setTimeout(() => presentationMap.invalidateSize(), 100);
+                setTimeout(() => {
+                    presentationMap.invalidateSize();
+                    if (typeof fitNriMap === 'function') fitNriMap();
+                }, 120);
             }
         }, 500);
         
@@ -280,16 +283,15 @@ function initializeMap() {
             // Initialize map centered on NTB
             presentationMap = L.map('presentationMap', {
                 zoomControl: false,
-                minZoom: 7,
-                maxZoom: 12,
+                minZoom: 6,
+                maxZoom: 14,
+                zoomSnap: 0.25,
                 attributionControl: true
-            }).setView([-8.6500, 117.3616], 8);
+            }).setView([-8.65, 117.36], 8);
 
-            // Add tile layer with error handling
-            const tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 19,
-                attribution: '© OpenStreetMap contributors | Data: DPMPTSP NTB',
-                errorTileUrl: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgZmlsbD0iI2Y1ZjVmNSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5UaWxlIEVycm9yPC90ZXh0Pjwvc3ZnPg=='
+            const tileLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+                maxZoom: 16,
+                attribution: 'Peta &copy; Esri · Batas wilayah geoBoundaries (CC BY 4.0) · Angka DPMPTSP NTB'
             });
 
             tileLayer.on('tileerror', (e) => {
@@ -298,27 +300,12 @@ function initializeMap() {
 
             presentationMap.addLayer(tileLayer);
 
-            // Add zoom control to bottom right
             L.control.zoom({
                 position: 'bottomright'
             }).addTo(presentationMap);
 
-            // Create markers layer
-            markersLayer = L.layerGroup().addTo(presentationMap);
-
-            // Add markers for each region
-            addRegionMarkers();
-
-            // Map event handlers
-            presentationMap.on('zoomend moveend', () => {
-                // Optional: Update map stats based on visible area
-            });
-
-            presentationMap.on('error', (e) => {
-                throw new Error(`Map error: ${e.message}`);
-            });
-
-            resolve();
+            renderInvestmentChoropleth(presentationMap).then(resolve).catch(reject);
+            return;
             
         } catch (error) {
             reject(error);
@@ -1165,7 +1152,8 @@ function showMapOverview() {
         if (presentationMap) {
             try {
                 presentationMap.invalidateSize();
-                presentationMap.setView([-8.6500, 117.3616], 8);
+                if (typeof fitNriMap === 'function') fitNriMap();
+                else presentationMap.setView([-8.6500, 117.3616], 8);
             } catch (error) {
                 logError('mapRefresh', error);
             }
@@ -1176,7 +1164,8 @@ function showMapOverview() {
 function resetMapView() {
     if (presentationMap) {
         try {
-            presentationMap.setView([-8.6500, 117.3616], 8);
+            if (typeof fitNriMap === 'function') fitNriMap();
+            else presentationMap.setView([-8.6500, 117.3616], 8);
             closeMapPopups();
         } catch (error) {
             logError('resetMapView', error);

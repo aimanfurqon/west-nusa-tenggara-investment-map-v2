@@ -210,55 +210,9 @@
                             </div>
                         </div>
                         <div class="map-container">
-                            <div id="presentationMap" role="img" aria-label="Peta interaktif investasi NTB"></div>
-                            
-                            <!-- Map Legend -->
-                            <div class="map-legend" role="legend" aria-label="Keterangan peta">
-                                <div class="legend-title">Keterangan</div>
-                                <div class="legend-items">
-                                    <div class="legend-item">
-                                        <div class="legend-marker ibu-kota" aria-hidden="true">
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                        <span>Ibu Kota Provinsi</span>
-                                    </div>
-                                    <div class="legend-item">
-                                        <div class="legend-marker kota" aria-hidden="true">
-                                            <i class="fas fa-building"></i>
-                                        </div>
-                                        <span>Kota</span>
-                                    </div>
-                                    <div class="legend-item">
-                                        <div class="legend-marker kabupaten" aria-hidden="true">
-                                            <i class="fas fa-mountain"></i>
-                                        </div>
-                                        <span>Kabupaten</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Map Stats -->
-                            <div class="map-stats" role="region" aria-label="Statistik investasi">
-                                <div class="stats-title">Statistik Investasi</div>
-                                <div class="stats-grid">
-                                    <div class="stats-item">
-                                        <div class="stats-value" id="mapTotalRegions">10</div>
-                                        <div class="stats-label">Wilayah</div>
-                                    </div>
-                                    <div class="stats-item">
-                                        <div class="stats-value" id="mapTotalCompanies">0</div>
-                                        <div class="stats-label">Perusahaan</div>
-                                    </div>
-                                    <div class="stats-item">
-                                        <div class="stats-value" id="mapTotalSectors">16</div>
-                                        <div class="stats-label">Sektor</div>
-                                    </div>
-                                    <div class="stats-item">
-                                        <div class="stats-value" id="mapTotalInvestment">0</div>
-                                        <div class="stats-label">Total Investasi</div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div id="presentationMap" role="img" aria-label="Peta realisasi investasi NTB Triwulan II 2026"></div>
+                            <section class="nri-summary" id="nriSummary" aria-label="Ringkasan realisasi investasi NTB"></section>
+                            <section class="nri-legend" id="nriLegend" aria-label="Skala warna realisasi investasi"></section>
 
                             <!-- Error State for Map -->
                             <div class="error-state" id="mapError">
@@ -325,6 +279,7 @@
     <!-- Custom JavaScript -->
     
     <script src="js/data.js"></script>
+    <script src="js/nri-map.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
